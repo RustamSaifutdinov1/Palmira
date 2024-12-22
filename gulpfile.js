@@ -54,6 +54,7 @@ function js() {
     return src([
             npmPath + 'jquery/dist/jquery.min.js',
             npmPath + 'bootstrap/dist/js/bootstrap.bundle.js',
+            npmPath + 'swiper/swiper-bundle.min.js',
             path.src.js
         ])
         .pipe(concat('app.min.js'))
@@ -85,6 +86,8 @@ function html() {
 function css() {
     return src([
             npmPath + 'bootstrap/dist/css/bootstrap.css',
+            npmPath + 'animate.css/animate.css',
+            npmPath + 'swiper/swiper-bundle.min.css',
             path.src.css,
         ])
         .pipe(

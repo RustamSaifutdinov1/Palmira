@@ -1,0 +1,99 @@
+/*
+    Перевод px в rem
+ */
+@function rem-size($n) {
+  @return calc($n / 18)+rem;
+}
+/*
+    Анимация подчеркивания элемента при наведении
+ */
+@mixin underline {
+  background-image: linear-gradient(rgb(var(--bs-primary-rgb)), rgb(var(--bs-primary-rgb)));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: .3s ease-in-out;
+}
+
+/*
+  Шрифты
+ */
+@font-face {
+  font-family: TT Travels;
+  src: url(../fonts/TTTravels-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: TT Travels;
+  src: url(../fonts/TTTravels-DemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: TT Travels;
+  src: url(../fonts/TTTravels-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: TT Travels;
+  src: url(../fonts/TTTravels-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+    Переменные
+ */
+:root {
+  --bg-light-grey: #F4F4F5;
+  --light-grey: #EAEBEC;
+  --dark-primary: #8A0527;
+  --bs-body-font-family: 'TT Travels';
+  --bs-body-font-size: 18px;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 27px;
+  --bs-body-color: var(--bs-black);
+  --bs-black: #2B3039;
+  --bs-black-rgb: 43, 48, 57;
+  --bs-gray: #C0C1C4;
+  --bs-primary-rgb: 255, 28, 28;
+  --bs-nav-link-font-size: 14px;
+}
+
+/*
+  Navbar
+ */
+:root,
+.navbar-nav {
+  --bs-nav-link-color: var(--bs-black);
+  --bs-nav-link-hover-color: rgb(var(--bs-primary-rgb));
+  --bs-navbar-active-color: rgb(var(--bs-primary-rgb));
+  --bs-nav-link-font-weight: 500;
+}
+/*
+  Выпадающий список
+ */
+.dropdown-menu{
+  --bs-dropdown-item-padding-y: 0;
+  --bs-dropdown-item-padding-x: 0;
+  --bs-dropdown-border-radius: 0;
+  --bs-dropdown-link-color: var(--bs-black);
+  --bs-dropdown-link-hover-bg: transparent;
+  --bs-dropdown-min-width: fit-content;
+  --bs-dropdown-bg: rgba(255, 255, 255, 0.9);
+}
+/*
+  Выпадающий список для каталога в шапке
+ */
+.dropdown-toggle.active + .dropdown-menu {
+  --bs-dropdown-link-active-bg: rgb(var(--bs-primary-rgb));
+}

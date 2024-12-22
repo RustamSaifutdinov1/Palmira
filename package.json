@@ -39,6 +39,7 @@
     "swiper": "^11.1.8"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3"
   }
 }

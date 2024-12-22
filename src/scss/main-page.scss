@@ -1,0 +1,51 @@
+@import "template";
+
+/*
+    Начальная страница
+ */
+
+/*
+    Баннер на главной
+*/
+.main-page-banner-slide {
+  padding: rem-size(59) rem-size(57) rem-size(56) rem-size(66);
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+}
+
+.main-page-banner-content {
+  @media (min-width: 992px) {
+    width: 40%;
+  }
+  @media (min-width: 1200px) and (max-width: 1530px) {
+    width: 50%;
+  }
+  @media (min-width: 1540px) {
+    width: 33%;
+  }
+
+  img {
+    @media (min-width: 1540px) {
+      margin-bottom: rem-size(74) !important;
+    }
+  }
+}
+
+.main-page-banner {
+  .swiper-pagination{
+    --swiper-pagination-bottom:36px;
+    left: rem-size(66);
+  }
+  .swiper-pagination-bullet {
+    --swiper-pagination-color: var(--bs-white);
+    --swiper-pagination-bullet-inactive-color: var(--bs-white);
+    --swiper-pagination-bullet-inactive-opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    --swiper-pagination-bullet-border-radius: 10px;
+    width: rem-size(40);
+  }
+}
