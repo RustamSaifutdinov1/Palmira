@@ -14,6 +14,9 @@
   z-index: 2;
   left: 0;
   width: 100%;
+  @media (max-width: 768px) {
+    padding: 1rem 2rem;
+  }
 }
 
 .main-page-banner-content {
@@ -35,17 +38,98 @@
 }
 
 .main-page-banner {
-  .swiper-pagination{
-    --swiper-pagination-bottom:36px;
+  .swiper-pagination {
+    --swiper-pagination-bottom: 36px;
     left: rem-size(66);
   }
+
   .swiper-pagination-bullet {
     --swiper-pagination-color: var(--bs-white);
     --swiper-pagination-bullet-inactive-color: var(--bs-white);
     --swiper-pagination-bullet-inactive-opacity: 1;
   }
-  .swiper-pagination-bullet-active{
+
+  .swiper-pagination-bullet-active {
     --swiper-pagination-bullet-border-radius: 10px;
     width: rem-size(40);
+  }
+}
+
+/*
+  Ссылки под баннером на главной
+ */
+.main-page-category-card {
+  svg {
+    height: rem-size(32);
+    width: rem-size(32);
+    fill: var(--bs-white);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .main-page-category-content {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .fs-3 {
+    line-height: rem-size(44);
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+  Блок "О компании" на главной
+ */
+.main-about {
+  padding: rem-size(84) rem-size(49) rem-size(32) rem-size(84);
+  @media (max-width: 992px) {
+    padding: 3rem;
+  }
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+
+  h2 {
+    margin-bottom: rem-size(45);
+    @media (min-width: 1571px) {
+      width: 77%;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .sub-title {
+    width: 77%;
+    margin-bottom: rem-size(90);
+    @media (min-width: 1571px) {
+      width: 60%;
+    }
+    @media (max-width: 1200px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .main-about-content {
+    gap: 5rem;
+    @media (min-width: 1571px) {
+      gap: rem-size(250);
+    }
+  }
+
+  a {
+    margin-top: rem-size(40);
+  }
+
+  img {
+    @media (max-width: 1200px) {
+      width: 15%;
+      height: fit-content;
+    }
   }
 }

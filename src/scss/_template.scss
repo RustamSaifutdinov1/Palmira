@@ -31,6 +31,20 @@ html {
 }
 
 /*
+  Расположение объекта
+ */
+.object-position-center {
+  object-position: center !important;
+}
+
+/*
+  Затемнение фона
+ */
+.bg-black-50 {
+  background: #2B303980;
+}
+
+/*
   Контейнер
  */
 @media (min-width: 1400px) {
@@ -94,6 +108,40 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem;
+}
+
+/*
+  Варианты заголовков
+ */
+.pre-title {
+  color: var(--bs-primary);
+  font-size: rem-size(12);
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  line-height: 1;
+  gap: rem-size(20);
+  margin-bottom: rem-size(45);
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: rem-size(10);
+    width: rem-size(10);
+    background-color: var(--bs-primary);
+    border-radius: 100%;
+  }
+}
+
+.sub-title {
+  font-size: rem-size(24);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: rem-size(27);
+  }
 }
 
 /*

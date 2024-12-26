@@ -18349,6 +18349,8 @@ button.swiper-pagination-bullet {
   --bs-gray: #C0C1C4;
   --bs-primary-rgb: 255, 28, 28;
   --bs-nav-link-font-size: 14px;
+  --bs-light-rgb: 244, 244, 245;
+  --bs-primary: #FF1C1C;
 }
 
 /*
@@ -18413,6 +18415,21 @@ html {
 }
 
 /*
+  Расположение объекта
+ */
+.object-position-center {
+  -o-object-position: center !important;
+     object-position: center !important;
+}
+
+/*
+  Затемнение фона
+ */
+.bg-black-50 {
+  background: rgba(43, 48, 57, 0.5019607843);
+}
+
+/*
   Контейнер
  */
 @media (min-width: 1400px) {
@@ -18471,6 +18488,43 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem;
+}
+
+/*
+  Варианты заголовков
+ */
+.pre-title {
+  color: var(--bs-primary);
+  font-size: 0.6666666667rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+  gap: 1.1111111111rem;
+  margin-bottom: 2.5rem;
+}
+.pre-title:before {
+  content: "";
+  display: inline-block;
+  height: 0.5555555556rem;
+  width: 0.5555555556rem;
+  background-color: var(--bs-primary);
+  border-radius: 100%;
+}
+
+.sub-title {
+  font-size: 1.3333333333rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 2rem;
+}
+@media (max-width: 768px) {
+  .sub-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 /*
@@ -18729,6 +18783,11 @@ header .cart-count {
   left: 0;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .main-page-banner-slide {
+    padding: 1rem 2rem;
+  }
+}
 
 @media (min-width: 992px) {
   .main-page-banner-content {
@@ -18752,7 +18811,7 @@ header .cart-count {
 }
 
 .main-page-banner .swiper-pagination {
-  --swiper-pagination-bottom:36px;
+  --swiper-pagination-bottom: 36px;
   left: 3.6666666667rem;
 }
 .main-page-banner .swiper-pagination-bullet {
@@ -18763,4 +18822,88 @@ header .cart-count {
 .main-page-banner .swiper-pagination-bullet-active {
   --swiper-pagination-bullet-border-radius: 10px;
   width: 2.2222222222rem;
+}
+
+/*
+  Ссылки под баннером на главной
+ */
+.main-page-category-card svg {
+  height: 1.7777777778rem;
+  width: 1.7777777778rem;
+  fill: var(--bs-white);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.main-page-category-card .main-page-category-content {
+  padding: 2rem 2rem 0 2rem;
+}
+.main-page-category-card .fs-3 {
+  line-height: 2.4444444444rem;
+}
+.main-page-category-card:hover svg {
+  opacity: 1;
+}
+
+/*
+  Блок "О компании" на главной
+ */
+.main-about {
+  padding: 4.6666666667rem 2.7222222222rem 1.7777777778rem 4.6666666667rem;
+}
+@media (max-width: 992px) {
+  .main-about {
+    padding: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .main-about {
+    padding: 2rem;
+  }
+}
+.main-about h2 {
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 1571px) {
+  .main-about h2 {
+    width: 77%;
+  }
+}
+@media (max-width: 768px) {
+  .main-about h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+.main-about .sub-title {
+  width: 77%;
+  margin-bottom: 5rem;
+}
+@media (min-width: 1571px) {
+  .main-about .sub-title {
+    width: 60%;
+  }
+}
+@media (max-width: 1200px) {
+  .main-about .sub-title {
+    margin-bottom: 3rem;
+  }
+}
+.main-about .main-about-content {
+  gap: 5rem;
+}
+@media (min-width: 1571px) {
+  .main-about .main-about-content {
+    gap: 13.8888888889rem;
+  }
+}
+.main-about a {
+  margin-top: 2.2222222222rem;
+}
+@media (max-width: 1200px) {
+  .main-about img {
+    width: 15%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }

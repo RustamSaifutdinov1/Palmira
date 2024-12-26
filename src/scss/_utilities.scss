@@ -4,6 +4,7 @@
 @function rem-size($n) {
   @return calc($n / 18)+rem;
 }
+
 /*
     Анимация подчеркивания элемента при наведении
  */
@@ -67,6 +68,8 @@
   --bs-gray: #C0C1C4;
   --bs-primary-rgb: 255, 28, 28;
   --bs-nav-link-font-size: 14px;
+  --bs-light-rgb: 244, 244, 245;
+  --bs-primary: #FF1C1C;
 }
 
 /*
@@ -79,10 +82,11 @@
   --bs-navbar-active-color: rgb(var(--bs-primary-rgb));
   --bs-nav-link-font-weight: 500;
 }
+
 /*
   Выпадающий список
  */
-.dropdown-menu{
+.dropdown-menu {
   --bs-dropdown-item-padding-y: 0;
   --bs-dropdown-item-padding-x: 0;
   --bs-dropdown-border-radius: 0;
@@ -91,6 +95,7 @@
   --bs-dropdown-min-width: fit-content;
   --bs-dropdown-bg: rgba(255, 255, 255, 0.9);
 }
+
 /*
   Выпадающий список для каталога в шапке
  */
